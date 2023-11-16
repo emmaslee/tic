@@ -1,0 +1,40 @@
+public static boolean checkForWin(boolean[][] p1Mark, boolean[][] p2Mark){
+    //check top
+    if(p1Mark[0][0] == true && p1Mark[0][1] == true && p1Mark[0][2] == true) {
+        return true;
+    }
+    else if(p2Mark[0][0] == true && p2Mark[0][1] == true && p2Mark[0][2] == true) {
+        return true;
+    }
+    //check mid
+    if(p1Mark[1][0] == true && p1Mark[1][1] == true && p1Mark[1][2] == true) {
+        return true;
+    }
+    else if(p2Mark[1][0] == true && p2Mark[1][1] == true && p2Mark[1][2] == true) {
+        return true;
+    }
+    //check bottom
+    if(p1Mark[2][0] == true && p1Mark[2][1] == true && p1Mark[2][2] == true) {
+        return true;
+    }
+    else if(p2Mark[2][0] == true && p2Mark[2][1] == true && p2Mark[2][2] == true) {
+        return true;
+    }
+    //check diagnol
+    if(p1Mark[0][0] == true && p1Mark[1][1] == true && p1Mark[2][2] == true) {
+        return true;
+    }
+    else if(p2Mark[0][0] == true && p2Mark[1][1] == true && p2Mark[2][2] == true) {
+        return true;
+    }
+    //check other diagnol
+    if(p1Mark[2][0] == true && p1Mark[1][1] == true && p1Mark[0][2] == true) {
+        return true;
+    }
+    else if(p2Mark[2][0] == true && p2Mark[1][1] == true && p2Mark[0][2] == true) {
+        return true;
+    }
+    return false;
+
+}
+}
